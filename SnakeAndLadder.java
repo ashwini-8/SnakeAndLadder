@@ -11,7 +11,7 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Snake And Ladder Game");
 		int diceNum = rollingDice();
-		System.out.println(diceNum);
+		System.out.println("diceNum:" + diceNum);
 		checkPosition(diceNum);
 	}
 
@@ -21,7 +21,7 @@ public class SnakeAndLadder {
 		return diceNum;
 	}
 
-	// UC3 action no play,ladder,snake
+	// UC3 action:no play,ladder,snake
 	static void checkPosition(int diceNum) {
 		int action = random.nextInt(3);
 		System.out.println(action);
@@ -30,11 +30,11 @@ public class SnakeAndLadder {
 		switch (action) {
 		case 0:
 			currentPosition = currentPosition;
-			System.out.println(currentPosition);
+			System.out.println("no play:" + currentPosition);
 			break;
 		case 1:
 			currentPosition = currentPosition + diceNum;
-			System.out.println(currentPosition);
+			System.out.println("ladder:" + currentPosition);
 			break;
 		case 2:
 			if (currentPosition == 0) {
@@ -42,7 +42,7 @@ public class SnakeAndLadder {
 			} else {
 				currentPosition = currentPosition - diceNum;
 			}
-			System.out.println(currentPosition);
+			System.out.println("Snake" + currentPosition);
 			break;
 
 		}
